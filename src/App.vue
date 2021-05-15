@@ -1,32 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="header">
+      <HeaderBg></HeaderBg>
+      <router-view name="header"></router-view>
     </div>
-    <router-view />
+    <div id="content">
+      <router-view />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import HeaderBg from "./components/HeaderBg";
+// import Menu from './components/Menu'
+export default {
+  components: {
+    HeaderBg,
+  },
+};
+</script>
+
+<style scoped>
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*htmlのデフォルトフォントサイズ10px*/
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 0;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#header {
+  height: 100vh;
+  width: 100vw;
 }
 </style>
