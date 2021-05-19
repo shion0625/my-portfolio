@@ -1,20 +1,14 @@
 <template>
   <div>
-    <button>works header</button>
-    <HeaderWord :title="title"></HeaderWord>
+    <SubTitle></SubTitle>
   </div>
 </template>
 
 <script>
-import HeaderWord from "../components/HeaderWord";
+import SubTitle from "../components/SubTitleWorks";
 export default {
-  data() {
-    return {
-      title: "WORKS",
-    };
-  },
   components: {
-    HeaderWord,
+    SubTitle,
   },
 };
 </script>

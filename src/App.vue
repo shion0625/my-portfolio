@@ -20,7 +20,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+#header {
+  height: 100vh;
+  width: 100vw;
+}
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -30,10 +34,5 @@ html {
 
 body {
   margin: 0;
-}
-
-#header {
-  height: 100vh;
-  width: 100vw;
 }
 </style>
