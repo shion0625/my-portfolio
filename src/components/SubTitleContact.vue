@@ -179,83 +179,81 @@
     />
   </svg>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   stroke: #f78fef;
   stroke-miterlimit: 10;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-}
-
-#subTitle {
-  margin: auto;
-}
-
-#subTitle .cls-1 {
-  stroke-dasharray: 671;
-  stroke-dashoffset: 671;
-  animation: line-anime 2s ease forwards, fill-1 1s 3.3s forwards;
-}
-#subTitle .cls-2 {
-  stroke-dasharray: 216;
-  stroke-dashoffset: 216;
-  animation: line-anime 2s ease forwards 0.3s, fill-2 1s 3.3s forwards;
-}
-#subTitle .cls-3 {
-  stroke-dasharray: 523;
-  stroke-dashoffset: 523;
-  animation: line-anime 2s ease forwards 0.6s, fill-3 1s 3.3s forwards;
-}
-#subTitle .cls-4 {
-  stroke-dasharray: 665;
-  stroke-dashoffset: 665;
-  animation: line-anime 2s ease forwards 0.9s;
-}
-#subTitle .cls-5 {
-  stroke-dasharray: 1699;
-  stroke-dashoffset: 1699;
-  animation: line-anime 2s ease forwards 1.2s, fill-5 1s 3.3s forwards;
-}
-#subTitle .cls-6 {
-  stroke-dasharray: 1110;
-  stroke-dashoffset: 1110;
-  animation: line-anime 2s ease forwards 1.5s, fill-6 1s 3.3s forwards;
-}
-#subTitle .cls-7 {
-  stroke-dasharray: 1341;
-  stroke-dashoffset: 1341;
-  animation: line-anime 2s ease forwards 1.8s, fill-7 1s 3.3s forwards;
-}
-#subTitle .cls-8 {
-  stroke-dasharray: 329;
-  stroke-dashoffset: 329;
-  animation: line-anime 2s ease forwards 1.8s;
-}
-#subTitle .cls-9 {
-  stroke-dasharray: 262;
-  stroke-dashoffset: 262;
-  animation: line-anime 2s ease forwards 1.8s;
-}
-#subTitle .cls-10 {
-  stroke-dasharray: 671;
-  stroke-dashoffset: 671;
-  animation: line-anime 2s ease forwards 1.8s, fill-10 1s 3.3s forwards;
-}
-#subTitle .cls-11 {
-  stroke-dasharray: 216;
-  stroke-dashoffset: 216;
-  animation: line-anime 2s ease forwards 1.8s, fill-11 1s 3.3s forwards;
-}
-#subTitle .cls-12 {
-  stroke-dasharray: 1110;
-  stroke-dashoffset: 1110;
-  animation: line-anime 2s ease forwards 1.8s, fill-12 1s 3.3s forwards;
+  body {
+    width: 100%;
+    height: 100vh;
+    #subTitle {
+      margin: auto;
+      fill: transparent;
+      .cls-1 {
+        stroke-dasharray: 671;
+        stroke-dashoffset: 671;
+        animation: line-anime 2s ease forwards, fill-1 1s 3.3s forwards;
+      }
+      .cls-2 {
+        stroke-dasharray: 216;
+        stroke-dashoffset: 216;
+        animation: line-anime 2s ease forwards 0.3s, fill-2 1s 3.3s forwards;
+      }
+      .cls-3 {
+        stroke-dasharray: 523;
+        stroke-dashoffset: 523;
+        animation: line-anime 2s ease forwards 0.6s, fill-3 1s 3.3s forwards;
+      }
+      .cls-4 {
+        stroke-dasharray: 665;
+        stroke-dashoffset: 665;
+        animation: line-anime 2s ease forwards 0.9s;
+      }
+      .cls-5 {
+        stroke-dasharray: 1699;
+        stroke-dashoffset: 1699;
+        animation: line-anime 2s ease forwards 1.2s, fill-5 1s 3.3s forwards;
+      }
+      .cls-6 {
+        stroke-dasharray: 1110;
+        stroke-dashoffset: 1110;
+        animation: line-anime 2s ease forwards 1.5s, fill-6 1s 3.3s forwards;
+      }
+      .cls-7 {
+        stroke-dasharray: 1341;
+        stroke-dashoffset: 1341;
+        animation: line-anime 2s ease forwards 1.8s, fill-7 1s 3.3s forwards;
+      }
+      .cls-8 {
+        stroke-dasharray: 329;
+        stroke-dashoffset: 329;
+        animation: line-anime 2s ease forwards 1.8s;
+      }
+      .cls-9 {
+        stroke-dasharray: 262;
+        stroke-dashoffset: 262;
+        animation: line-anime 2s ease forwards 1.8s;
+      }
+      .cls-10 {
+        stroke-dasharray: 671;
+        stroke-dashoffset: 671;
+        animation: line-anime 2s ease forwards 1.8s, fill-10 1s 3.3s forwards;
+      }
+      .cls-11 {
+        stroke-dasharray: 216;
+        stroke-dashoffset: 216;
+        animation: line-anime 2s ease forwards 1.8s, fill-11 1s 3.3s forwards;
+      }
+      .cls-12 {
+        stroke-dasharray: 1110;
+        stroke-dashoffset: 1110;
+        animation: line-anime 2s ease forwards 1.8s, fill-12 1s 3.3s forwards;
+      }
+    }
+  }
 }
 
 @keyframes line-anime {

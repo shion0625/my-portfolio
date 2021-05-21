@@ -116,7 +116,7 @@
     />
   </svg>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 * {
   padding: 0;
   margin: 0;
@@ -124,56 +124,55 @@
   stroke: #ffffac;
   stroke-miterlimit: 10;
   stroke-width: 3px;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-}
-
-#subTitle {
-  margin: auto;
-}
-
-#subTitle .cls-1 {
-  stroke-dasharray: 1848;
-  stroke-dashoffset: 1848;
-  animation: line-anime 2s ease forwards, fill-1 1s 3.8s forwards;
-}
-#subTitle .cls-2 {
-  stroke-dasharray: 452;
-  stroke-dashoffset: 452;
-  animation: line-anime 2s ease forwards 0.3s;
-}
-#subTitle .cls-3 {
-  stroke-dasharray: 361;
-  stroke-dashoffset: 361;
-  animation: line-anime 2s ease forwards 0.6s;
-}
-#subTitle .cls-4 {
-  stroke-dasharray: 2398;
-  stroke-dashoffset: 2388;
-  animation: line-anime 2s ease forwards 0.9s, fill-4 1s 3.8s forwards;
-}
-#subTitle .cls-5 {
-  stroke-dasharray: 681;
-  stroke-dashoffset: 681;
-  animation: line-anime 2s ease forwards 1.2s, fill-5 1s 3.8s forwards;
-}
-#subTitle .cls-6 {
-  stroke-dasharray: 878;
-  stroke-dashoffset: 878;
-  animation: line-anime 2s ease forwards 1.5s;
-}
-#subTitle .cls-7 {
-  stroke-dasharray: 1843;
-  stroke-dashoffset: 1843;
-  animation: line-anime 2s ease forwards 1.8s, fill-7 1s 3.8s forwards;
-}
-#subTitle .cls-8 {
-  stroke-dasharray: 1535;
-  stroke-dashoffset: 1535;
-  animation: line-anime 2s ease forwards 1.8s, fill-8 1s 3.8s forwards;
+  body {
+    width: 100%;
+    height: 100vh;
+    #subTitle {
+      margin: auto;
+      fill: transparent;
+      fill-opacity: 0.7;
+      .cls-1 {
+        stroke-dasharray: 1848;
+        stroke-dashoffset: 1848;
+        animation: line-anime 2s ease forwards, fill-1 1s 3.8s forwards;
+      }
+      .cls-2 {
+        stroke-dasharray: 452;
+        stroke-dashoffset: 452;
+        animation: line-anime 2s ease forwards 0.3s;
+      }
+      .cls-3 {
+        stroke-dasharray: 361;
+        stroke-dashoffset: 361;
+        animation: line-anime 2s ease forwards 0.6s;
+      }
+      .cls-4 {
+        stroke-dasharray: 2398;
+        stroke-dashoffset: 2388;
+        animation: line-anime 2s ease forwards 0.9s, fill-4 1s 3.8s forwards;
+      }
+      .cls-5 {
+        stroke-dasharray: 681;
+        stroke-dashoffset: 681;
+        animation: line-anime 2s ease forwards 1.2s, fill-5 1s 3.8s forwards;
+      }
+      .cls-6 {
+        stroke-dasharray: 878;
+        stroke-dashoffset: 878;
+        animation: line-anime 2s ease forwards 1.5s;
+      }
+      .cls-7 {
+        stroke-dasharray: 1843;
+        stroke-dashoffset: 1843;
+        animation: line-anime 2s ease forwards 1.8s, fill-7 1s 3.8s forwards;
+      }
+      .cls-8 {
+        stroke-dasharray: 1535;
+        stroke-dashoffset: 1535;
+        animation: line-anime 2s ease forwards 1.8s, fill-8 1s 3.8s forwards;
+      }
+    }
+  }
 }
 
 @keyframes line-anime {
