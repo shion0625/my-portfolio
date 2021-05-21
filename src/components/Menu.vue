@@ -3,21 +3,23 @@
     <nav>
       <ul>
         <li data-text="Home">
-          <router-link :to="{ name: 'TopHome' }" class="ber">HOME</router-link>
+          <router-link :to="{ name: 'TopHome' }"
+            ><i class="fas fa-home"></i>HOME</router-link
+          >
         </li>
         <li data-text="Works">
-          <router-link :to="{ name: 'MyWorks' }" class="ber">
-            WORKS</router-link
+          <router-link :to="{ name: 'MyWorks' }"
+            ><i class="fas fa-laptop"></i> WORKS</router-link
           >
         </li>
         <li data-text="About">
-          <router-link :to="{ name: 'AboutMe' }" class="ber">
-            ABOUT</router-link
+          <router-link :to="{ name: 'AboutMe' }"
+            ><i class="fas fa-user"></i> ABOUT</router-link
           >
         </li>
         <li data-text="Contact">
-          <router-link :to="{ name: 'ContactToMe' }" class="ber"
-            >CONTACT</router-link
+          <router-link :to="{ name: 'ContactToMe' }"
+            ><i class="fas fa-envelope"></i> CONTACT</router-link
           >
         </li>
       </ul>
@@ -27,6 +29,7 @@
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap");
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
 
 #menu {
   margin: 0;

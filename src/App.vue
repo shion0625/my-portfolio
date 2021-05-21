@@ -10,9 +10,8 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 import HeaderBg from "./components/HeaderBg";
-// import Menu from './components/Menu'
 export default {
   components: {
     HeaderBg,
