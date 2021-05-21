@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="header-bg">
     <vue-particles
       color="#dedede"
       :particleOpacity="0.5"
@@ -23,7 +23,10 @@
 
 <style scoped>
 #particles-js {
-  background-color: #000000;
+  background-image: url("../assets/image/library.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   position: absolute;
   top: 0;
