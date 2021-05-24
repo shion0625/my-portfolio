@@ -2,25 +2,26 @@
   <div id="about-content">
     <div id="profile">
       <h2>PROFILE</h2>
-      <div id="profile-content"></div>
+      <div id="profile-content">
+        <ul>
+          <li v-for="(profile, index) in profiles" :key="index">
+            {{ profile }}
+          </li>
+        </ul>
+      </div>
     </div>
     <h2>SKILL</h2>
     <div class="skill-contents">
-      <div
-        class="skill-content"
-        v-for="skillTitle in skillTitles"
-        :key="skillTitle"
-      >
-        <h3>{{ skillTitle }}</h3>
+      <div class="skill-content" v-for="item in contents" :key="item.name">
+        <h3>{{ item.name }}</h3>
         <table>
           <tr>
             <th>言語</th>
             <th>経験年数</th>
-            <th>アイコン</th>
           </tr>
-          <tr v-for="num in number" :key="num">
-            <td v-for="info in imfomations" :key="info">
-              {{ info }}
+          <tr v-for="num in item.number" :key="num.id">
+            <td v-for="info in num.description" :key="info.content">
+              {{ info.content }}
             </td>
           </tr>
         </table>
@@ -33,16 +34,54 @@
 export default {
   data() {
     return {
-      skillTitles: [
-        "フロントエンド",
-        "バックエンド",
-        "データベース",
-        "インフラ・サーバ",
-        "その他",
-        "保有資格",
+      contents: [
+        {
+          name: "フロントエンド",
+          number: [
+            { description: [{ content: "HTML" }, { content: "2年" }] },
+            { description: [{ content: "CSS" }, { content: "2年" }] },
+            { description: [{ content: "SCSS" }, { content: "1年" }] },
+            { description: [{ content: "Jquery" }, { content: "半年" }] },
+            { description: [{ content: "Vue.js" }, { content: "1年" }] },
+            { description: [{ content: "Bootstrap" }, { content: "半年" }] },
+            { description: [{ content: "pug" }, { content: "半年" }] },
+          ],
+        },
+        {
+          name: "バックエンド",
+          number: [
+            { description: [{ content: "Node.js" }, { content: "2年" }] },
+            { description: [{ content: "PHP" }, { content: "1年" }] },
+            { description: [{ content: "Python" }, { content: "1年" }] },
+          ],
+        },
+        {
+          name: "データベース",
+          number: [
+            { description: [{ content: "MYSQL" }, { content: "1年" }] },
+            { description: [{ content: "nedb" }, { content: "1年" }] },
+          ],
+        },
+        {
+          name: "その他",
+          number: [
+            { description: [{ content: "git" }, { content: "2年" }] },
+            { description: [{ content: "slack" }, { content: "1年" }] },
+            { description: [{ content: "vscode" }, { content: "2年" }] },
+            { description: [{ content: "docker" }, { content: "1ヶ月" }] },
+            { description: [{ content: "Wordpress" }, { content: "3ヶ月" }] },
+          ],
+        },
+        {
+          name: "学習したことがある言語",
+          number: [
+            { description: [{ content: "c" }, { content: "半年" }] },
+            { description: [{ content: "c++" }, { content: "半年" }] },
+            { description: [{ content: "Java" }, { content: "3ヶ月" }] },
+          ],
+        },
       ],
-      imfomations: ["html", "2", "icon"],
-      number: 3,
+      profiles: ["名前: yododgawa kaito", "出身: 神奈川県", ""],
     };
   },
 };
@@ -63,9 +102,34 @@ $breakpoints: (
 
 #about-content {
   background-color: #f3f3f3;
+  font-family: "Courier New", Courier, monospace;
   h2 {
     font-size: 4rem;
     text-align: center;
+  }
+  #profile-content {
+    li {
+      margin: auto;
+      width: 40%;
+      display: list-item; /* 縦に並べる */
+      list-style-type: none;
+      text-transform: uppercase;
+      padding: 0.5em;
+      background: #ccc;
+      text-align: center;
+      font-size: 2.6rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      @include mq() {
+        font-size: 2.3rem;
+      }
+      @include mq(md) {
+        margin: 0;
+        width: 90%;
+      }
+      @include mq(sm) {
+        font-size: 1.7rem;
+      }
+    }
   }
   .skill-contents {
     display: flex;
@@ -100,6 +164,7 @@ $breakpoints: (
       }
       table {
         margin: auto;
+        font-family: "Times New Roman", Times, serif;
       }
     }
   }

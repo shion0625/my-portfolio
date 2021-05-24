@@ -7,6 +7,9 @@
     <div id="content">
       <router-view />
     </div>
+    <div id="fotter">
+      <router-view name="footer"></router-view>
+    </div>
   </div>
 </template>
 
