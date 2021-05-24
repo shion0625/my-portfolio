@@ -2,13 +2,14 @@
   <div id="app">
     <div id="header">
       <HeaderBg></HeaderBg>
-      <router-view name="header"></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view name="header"></router-view>
+      </transition>
     </div>
     <div id="content">
-      <router-view />
-    </div>
-    <div id="fotter">
-      <router-view name="footer"></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </div>
   </div>
 </template>
@@ -35,5 +36,14 @@ html {
       width: 100vw;
     }
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
