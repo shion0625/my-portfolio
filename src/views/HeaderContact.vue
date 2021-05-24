@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 #h-contact {
-  height: 100vh;
+  height: 80vh;
   position: relative;
   .sub-title {
     width: 90%;
